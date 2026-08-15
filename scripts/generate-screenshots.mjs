@@ -13,6 +13,11 @@
 // chat code blocks with, so the `--sh-*` mapping is exercised for real rather
 // than approximated by hand-written spans.
 //
+// Class names here must not collide with Tailwind utility names: `bb plugin
+// build` runs its Tailwind scan over the whole repo except dist/ and
+// node_modules/, so a bare `grow` or `hidden` in this file ships a dead rule in
+// the plugin's own dist/app.css.
+//
 // Fonts: BB asks for Inter and falls back to the platform sans. This script
 // pins the fallback to the system UI stack so a machine without Inter installed
 // still produces a clean render.
@@ -162,7 +167,7 @@ body {
   font-size: 11px; font-weight: 700; display: grid; place-items: center;
 }
 .brand .name { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
-.brand .grow { flex: 1; }
+.brand .fill { flex: 1; }
 .brand .kbd {
   font-family: var(--font-mono); font-size: 10px; padding: 2px 5px;
   border-radius: 4px; border: 1px solid var(--border);
@@ -405,7 +410,7 @@ export function appHtml(theme) {
   <aside class="sidebar">
     <div class="brand">
       <span class="mark">b</span><span class="name">bb</span>
-      <span class="grow"></span><span class="kbd">⌘K</span>
+      <span class="fill"></span><span class="kbd">⌘K</span>
     </div>
     <div class="side-label">Projects</div>
     ${rows}
