@@ -139,7 +139,7 @@ var {
   useSonner
 } = mod3;
 
-// Git/bb-plugin-ayu/generated/palettes.ts
+// generated/palettes.ts
 var AYU_PALETTES = {
   "light": {
     "palette.gray.l1": "#86878c",
@@ -473,7 +473,7 @@ var AYU_PALETTES = {
   }
 };
 
-// Git/bb-plugin-ayu/themes-meta.ts
+// themes-meta.ts
 var AYU_THEMES = [
   {
     id: "ayu-light",
@@ -495,7 +495,7 @@ var AYU_THEMES = [
   }
 ];
 
-// Git/bb-plugin-ayu/node_modules/clsx/dist/clsx.mjs
+// node_modules/clsx/dist/clsx.mjs
 function r(e) {
   var t, f, n = "";
   if ("string" == typeof e || "number" == typeof e) n += e;
@@ -510,7 +510,7 @@ function clsx() {
   return n;
 }
 
-// Git/bb-plugin-ayu/node_modules/class-variance-authority/dist/index.mjs
+// node_modules/class-variance-authority/dist/index.mjs
 var falsyToString = (value) => typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
 var cx = clsx;
 var cva = (base, config) => (props) => {
@@ -552,7 +552,7 @@ var cva = (base, config) => (props) => {
   return cx(base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
 };
 
-// Git/bb-plugin-ayu/node_modules/tailwind-merge/dist/bundle-mjs.mjs
+// node_modules/tailwind-merge/dist/bundle-mjs.mjs
 var concatArrays = (array1, array2) => {
   const combinedArray = new Array(array1.length + array2.length);
   for (let i = 0; i < array1.length; i++) {
@@ -3806,7 +3806,7 @@ var getDefaultConfig = () => {
 };
 var twMerge = /* @__PURE__ */ createTailwindMerge(getDefaultConfig);
 
-// Git/bb-plugin-ayu/lib/utils.ts
+// lib/utils.ts
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
@@ -3823,7 +3823,7 @@ var {
   jsxs
 } = mod4;
 
-// Git/bb-plugin-ayu/components/ui/badge.tsx
+// components/ui/badge.tsx
 var badgeVariants = cva(
   "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
@@ -3844,7 +3844,7 @@ function Badge({ className, variant, ...props }) {
   return /* @__PURE__ */ jsx("div", { className: cn(badgeVariants({ variant }), className), ...props });
 }
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-compose-refs/dist/index.mjs
+// node_modules/@radix-ui/react-compose-refs/dist/index.mjs
 var __defProp2 = Object.defineProperty;
 var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
 function setRef(ref, value) {
@@ -3885,7 +3885,7 @@ function useComposedRefs(...refs) {
 }
 __name(useComposedRefs, "useComposedRefs");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-slot/dist/index.mjs
+// node_modules/@radix-ui/react-slot/dist/index.mjs
 var __defProp3 = Object.defineProperty;
 var __name2 = (target, value) => __defProp3(target, "name", { value, configurable: true });
 // @__NO_SIDE_EFFECTS__
@@ -4021,10 +4021,10 @@ var createSlottableError = /* @__PURE__ */ __name2((ownerName) => {
 }, "createSlottableError");
 var use2 = react_exports[" use ".trim().toString()];
 
-// Git/bb-plugin-ayu/components/ui/motion.ts
+// components/ui/motion.ts
 var CONTROL_HOVER_TRANSITION = "transition-colors duration-150 hover:duration-0";
 
-// Git/bb-plugin-ayu/components/ui/button.tsx
+// components/ui/button.tsx
 var buttonVariants = cva(
   `inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ${CONTROL_HOVER_TRANSITION} focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0`,
   {
@@ -4087,7 +4087,7 @@ var {
   version: version2
 } = mod5;
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-primitive/dist/index.mjs
+// node_modules/@radix-ui/react-primitive/dist/index.mjs
 var __defProp4 = Object.defineProperty;
 var __name3 = (target, value) => __defProp4(target, "name", { value, configurable: true });
 var NODES = [
@@ -4127,7 +4127,7 @@ function dispatchDiscreteCustomEvent(target, event) {
 }
 __name3(dispatchDiscreteCustomEvent, "dispatchDiscreteCustomEvent");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-separator/dist/index.mjs
+// node_modules/@radix-ui/react-separator/dist/index.mjs
 var __defProp5 = Object.defineProperty;
 var __name4 = (target, value) => __defProp5(target, "name", { value, configurable: true });
 var DEFAULT_ORIENTATION = "horizontal";
@@ -4155,7 +4155,7 @@ function isValidOrientation(orientation) {
 __name4(isValidOrientation, "isValidOrientation");
 var Root = Separator;
 
-// Git/bb-plugin-ayu/components/ui/separator.tsx
+// components/ui/separator.tsx
 var Separator3 = forwardRef(
   ({ className, orientation = "horizontal", decorative = true, ...props }, ref) => /* @__PURE__ */ jsx(
     Root,
@@ -4174,7 +4174,7 @@ var Separator3 = forwardRef(
 );
 Separator3.displayName = Root.displayName;
 
-// Git/bb-plugin-ayu/components/ui/skeleton.tsx
+// components/ui/skeleton.tsx
 function Skeleton({
   className,
   ...props
@@ -4188,7 +4188,7 @@ function Skeleton({
   );
 }
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/primitive/dist/index.mjs
+// node_modules/@radix-ui/primitive/dist/index.mjs
 var __defProp6 = Object.defineProperty;
 var __name5 = (target, value) => __defProp6(target, "name", { value, configurable: true });
 var canUseDOM = !!(typeof window !== "undefined" && window.document && window.document.createElement);
@@ -4240,7 +4240,7 @@ function isFrame(element) {
 }
 __name5(isFrame, "isFrame");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-context/dist/index.mjs
+// node_modules/@radix-ui/react-context/dist/index.mjs
 var __defProp7 = Object.defineProperty;
 var __name6 = (target, value) => __defProp7(target, "name", { value, configurable: true });
 // @__NO_SIDE_EFFECTS__
@@ -4331,7 +4331,7 @@ function composeContextScopes(...scopes) {
 }
 __name6(composeContextScopes, "composeContextScopes");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-collection/dist/index.mjs
+// node_modules/@radix-ui/react-collection/dist/index.mjs
 var __defProp8 = Object.defineProperty;
 var __name7 = (target, value) => __defProp8(target, "name", { value, configurable: true });
 // @__NO_SIDE_EFFECTS__
@@ -4873,11 +4873,11 @@ function getChildListObserver(callback) {
 }
 __name7(getChildListObserver, "getChildListObserver");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-use-layout-effect/dist/index.mjs
+// node_modules/@radix-ui/react-use-layout-effect/dist/index.mjs
 var useLayoutEffect2 = globalThis?.document ? useLayoutEffect : () => {
 };
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-id/dist/index.mjs
+// node_modules/@radix-ui/react-id/dist/index.mjs
 var __defProp9 = Object.defineProperty;
 var __name8 = (target, value) => __defProp9(target, "name", { value, configurable: true });
 var useReactId = react_exports[" useId ".trim().toString()] || (() => void 0);
@@ -4891,7 +4891,7 @@ function useId2(deterministicId) {
 }
 __name8(useId2, "useId");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
+// node_modules/@radix-ui/react-use-callback-ref/dist/index.mjs
 var __defProp10 = Object.defineProperty;
 var __name9 = (target, value) => __defProp10(target, "name", { value, configurable: true });
 function useCallbackRef(callback) {
@@ -4903,10 +4903,10 @@ function useCallbackRef(callback) {
 }
 __name9(useCallbackRef, "useCallbackRef");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/primitive/dist/internal/is-development.false.mjs
+// node_modules/@radix-ui/primitive/dist/internal/is-development.false.mjs
 var IS_DEVELOPMENT = false;
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-use-effect-event/dist/index.mjs
+// node_modules/@radix-ui/react-use-effect-event/dist/index.mjs
 var __defProp11 = Object.defineProperty;
 var __name10 = (target, value) => __defProp11(target, "name", { value, configurable: true });
 var useReactEffectEvent = react_exports[" useEffectEvent ".trim().toString()];
@@ -4931,7 +4931,7 @@ function useEffectEvent2(callback) {
 }
 __name10(useEffectEvent2, "useEffectEvent");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-use-controllable-state/dist/index.mjs
+// node_modules/@radix-ui/react-use-controllable-state/dist/index.mjs
 var __defProp12 = Object.defineProperty;
 var __name11 = (target, value) => __defProp12(target, "name", { value, configurable: true });
 var useInsertionEffect2 = react_exports[" useInsertionEffect ".trim().toString()] || useLayoutEffect2;
@@ -5063,7 +5063,7 @@ function useControllableStateReducer(reducer, userArgs, initialArg, init) {
 }
 __name11(useControllableStateReducer, "useControllableStateReducer");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-direction/dist/index.mjs
+// node_modules/@radix-ui/react-direction/dist/index.mjs
 var __defProp13 = Object.defineProperty;
 var __name12 = (target, value) => __defProp13(target, "name", { value, configurable: true });
 var DirectionContext = createContext(void 0);
@@ -5073,7 +5073,7 @@ function useDirection(localDir) {
 }
 __name12(useDirection, "useDirection");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-use-is-hydrated/dist/index.mjs
+// node_modules/@radix-ui/react-use-is-hydrated/dist/index.mjs
 var __defProp14 = Object.defineProperty;
 var __name13 = (target, value) => __defProp14(target, "name", { value, configurable: true });
 var _isHydrated = false;
@@ -5104,7 +5104,7 @@ function useIsHydratedModern() {
 __name13(useIsHydratedModern, "useIsHydratedModern");
 var useIsHydrated2 = typeof useReactSyncExternalStore === "function" ? useIsHydratedModern : useIsHydrated;
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-roving-focus/dist/index.mjs
+// node_modules/@radix-ui/react-roving-focus/dist/index.mjs
 var __defProp15 = Object.defineProperty;
 var __name14 = (target, value) => __defProp15(target, "name", { value, configurable: true });
 var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
@@ -5330,7 +5330,7 @@ __name14(wrapArray, "wrapArray");
 var Root2 = RovingFocusGroup;
 var Item = RovingFocusGroupItem;
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-presence/dist/index.mjs
+// node_modules/@radix-ui/react-presence/dist/index.mjs
 var __defProp16 = Object.defineProperty;
 var __name15 = (target, value) => __defProp16(target, "name", { value, configurable: true });
 function useStateMachine(initialState, machine) {
@@ -5507,7 +5507,7 @@ function getElementRef2(element) {
 }
 __name15(getElementRef2, "getElementRef");
 
-// Git/bb-plugin-ayu/node_modules/@radix-ui/react-tabs/dist/index.mjs
+// node_modules/@radix-ui/react-tabs/dist/index.mjs
 var __defProp17 = Object.defineProperty;
 var __name16 = (target, value) => __defProp17(target, "name", { value, configurable: true });
 var TABS_NAME = "Tabs";
@@ -5690,7 +5690,7 @@ var List = TabsList;
 var Trigger = TabsTrigger;
 var Content = TabsContent;
 
-// Git/bb-plugin-ayu/components/ui/tabs.tsx
+// components/ui/tabs.tsx
 var Tabs3 = Root22;
 var TabsList3 = forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsx(
   List,
@@ -5729,7 +5729,7 @@ var TabsContent3 = forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ 
 ));
 TabsContent3.displayName = Content.displayName;
 
-// Git/bb-plugin-ayu/app.tsx
+// app.tsx
 var PLUGIN_ID = "ayu";
 var qualify = (id) => `plugin:${PLUGIN_ID}:${id}`;
 var RAMP_ORDER = [

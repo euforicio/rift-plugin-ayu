@@ -372,6 +372,9 @@
     .shrink-0 {
       flex-shrink: 0;
     }
+    .grow {
+      flex-grow: 1;
+    }
     .translate-x-\[-50\%\] {
       --tw-translate-x: -50%;
       translate: var(--tw-translate-x) var(--tw-translate-y);
