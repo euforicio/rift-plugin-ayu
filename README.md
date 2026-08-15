@@ -3,6 +3,8 @@
 The three [ayu](https://github.com/ayu-theme/ayu-colors) themes for BB — Light,
 Dark, and Mirage — with a palette explorer panel and a `bb ayu` colour lookup.
 
+![Ayu Light, Ayu Dark and Ayu Mirage side by side](assets/screenshots/hero.png)
+
 ## Install
 
 ```
@@ -12,24 +14,69 @@ bb plugin install git:https://github.com/vburojevic/bb-plugin-ayu.git
 Then pick a theme under Settings → Appearance, or `bb theme set
 plugin:ayu:ayu-dark`.
 
-## What you get
+## The three themes
 
-- **Three themes** under Settings → Appearance (or `bb theme set
-  plugin:ayu:<ayu-light|ayu-dark|ayu-mirage>`). Each variant is a whole theme,
-  the way ayu ships them everywhere else: one stylesheet paints both of BB's
-  modes, so selecting Ayu Dark gives you Ayu Dark whichever way the light/dark
-  switch is set.
-- **An “Ayu” panel** on the plugin’s Settings page (Settings → Ayu): one-click
-  theme switching with live
-  miniature previews drawn from each palette, and every colour ayu publishes —
-  ramps, syntax, terminal, interface — click any swatch to copy its hex. The
-  panel tracks theme changes from other windows in realtime.
-- **`bb ayu`** for agents and scripts:
+Each variant is a whole theme, the way ayu ships them everywhere else: one
+stylesheet paints both of BB's modes, so selecting Ayu Dark gives you Ayu Dark
+whichever way the light/dark switch is set.
 
-  ```
-  bb ayu themes                  # the three themes and the command that activates each
-  bb ayu colors light syntax     # resolved colours, filterable, --json available
-  ```
+```
+bb theme set plugin:ayu:ayu-light
+bb theme set plugin:ayu:ayu-dark
+bb theme set plugin:ayu:ayu-mirage
+```
+
+### Ayu Light
+
+Warm off-white, amber accent. A low-contrast palette by design.
+
+![BB in Ayu Light](assets/screenshots/ui-light.png)
+
+### Ayu Dark
+
+Deep near-black, amber accent.
+
+![BB in Ayu Dark](assets/screenshots/ui-dark.png)
+
+### Ayu Mirage
+
+Muted blue-grey, warm amber accent.
+
+![BB in Ayu Mirage](assets/screenshots/ui-mirage.png)
+
+## The Ayu panel
+
+Settings → Ayu switches themes with live miniature previews drawn from each
+palette. The panel tracks theme changes from other windows in realtime.
+
+![The theme switcher in Settings → Ayu](assets/screenshots/panel-dark.png)
+
+Below the switcher sits every colour ayu publishes for the selected variant —
+ramps, syntax, terminal, interface. Click any swatch to copy its hex.
+
+![The palette explorer](assets/screenshots/palette-dark.png)
+
+<details>
+<summary>The same panel in Ayu Light and Ayu Mirage</summary>
+
+![The Ayu panel in Ayu Light](assets/screenshots/panel-light.png)
+
+![The Ayu palette in Ayu Light](assets/screenshots/palette-light.png)
+
+![The Ayu panel in Ayu Mirage](assets/screenshots/panel-mirage.png)
+
+![The Ayu palette in Ayu Mirage](assets/screenshots/palette-mirage.png)
+
+</details>
+
+## `bb ayu`
+
+For agents and scripts:
+
+```
+bb ayu themes                  # the three themes and the command that activates each
+bb ayu colors light syntax     # resolved colours, filterable, --json available
+```
 
 ## Architecture
 
@@ -42,6 +89,7 @@ themes-meta.ts                plain shared data (theme ids/names/variants)
 server.ts                     rpc (active theme, switch via bb.sdk.theme),
                               realtime signal, `bb ayu` CLI
 app.tsx                       the Settings-page panel, vendored shadcn components
+scripts/generate-screenshots.mjs   the README images, rendered from the above
 ```
 
 Palette data never crosses rpc — `generated/palettes.ts` is a plain module the
@@ -147,6 +195,7 @@ it produces muddy off-palette browns instead of ayu.
 ```
 npm install
 npm run generate        # regenerate themes/ + generated/ from the ayu package
+npm run screenshots     # regenerate assets/screenshots/ from themes/ + generated/
 npm run typecheck
 bb plugin build         # bundle app.tsx -> dist/
 bb plugin install .     # or: bb plugin dev  (watch loop)
@@ -154,5 +203,19 @@ bb plugin install .     # or: bb plugin dev  (watch loop)
 
 UI components under `components/ui/` are vendored from the BB registry (shadcn
 model) — add more with `npx shadcn@latest add @bb/<name>`.
+
+### About the screenshots
+
+They are rendered, not captured from a running BB. `npm run screenshots` loads
+`themes/<id>.css` verbatim into a headless Chromium page over a small base layer
+that reproduces the token derivations BB performs but this plugin leaves alone
+(`--foreground`, `--ring`, the `--sh-*` defaults), then screenshots it at 2x. The
+code block is highlighted by sugar-high — the same library BB uses — so the
+`--sh-*` mapping above is exercised for real.
+
+Every colour in the images is therefore a colour the plugin actually ships, and
+regenerating after a palette change keeps them honest. The window layout is a
+stand-in for BB's chrome; the content is invented. Nothing comes from anyone's
+BB instance.
 
 Colours are MIT-licensed by the ayu project (Ike Ku / Konstantin Pschera).

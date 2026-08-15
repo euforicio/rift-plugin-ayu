@@ -8,6 +8,7 @@
   },
   "scripts": {
     "generate": "node scripts/generate-themes.mjs",
+    "screenshots": "node scripts/generate-screenshots.mjs",
     "typecheck": "tsc --noEmit"
   },
   "bb": {
@@ -48,7 +49,9 @@
     "ayu": "9.1.0-beta.0",
     "better-sqlite3": "^12.0.0",
     "hono": "^4.11.9",
+    "playwright": "^1.62.1",
     "sonner": "^2.0.7",
+    "sugar-high": "^1.2.1",
     "typescript": "^5.7.0",
     "vaul": "^1.1.2",
     "zod": "^4.3.6"
