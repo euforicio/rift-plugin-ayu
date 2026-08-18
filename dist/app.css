@@ -152,9 +152,6 @@
     .relative {
       position: relative;
     }
-    .static {
-      position: static;
-    }
     .sticky {
       position: sticky;
     }
@@ -224,9 +221,6 @@
     .block {
       display: block;
     }
-    .contents {
-      display: contents;
-    }
     .flex {
       display: flex;
     }
@@ -235,9 +229,6 @@
     }
     .hidden {
       display: none;
-    }
-    .inline {
-      display: inline;
     }
     .inline-flex {
       display: inline-flex;
@@ -726,9 +717,6 @@
         color: color-mix(in oklab, var(--color-white) 80%, transparent);
       }
     }
-    .lowercase {
-      text-transform: lowercase;
-    }
     .underline-offset-4 {
       text-underline-offset: 4px;
     }
@@ -824,9 +812,6 @@
     .zoom-in-95 {
       --tw-enter-scale: calc(95*1%);
       --tw-enter-scale: .95;
-    }
-    .paused {
-      animation-play-state: paused;
     }
     .running {
       animation-play-state: running;

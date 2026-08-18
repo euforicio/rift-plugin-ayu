@@ -11,7 +11,7 @@
 //
 // Palette data itself never crosses rpc: `generated/palettes.ts` is a plain
 // module, so the frontend bundles it directly.
-import { defineRpcContract, type BbPluginApi } from "@bb/plugin-sdk";
+import { defineRpcContract, type BbPluginApi } from "@get-bb/plugin-sdk";
 import { z } from "zod";
 import { AYU_PALETTES, AYU_VARIANTS, type AyuVariant } from "./generated/palettes";
 import { AYU_THEMES } from "./themes-meta";
