@@ -219,3 +219,10 @@ stand-in for BB's chrome; the content is invented. Nothing comes from anyone's
 BB instance.
 
 Colours are MIT-licensed by the ayu project (Ike Ku / Konstantin Pschera).
+
+---
+
+## More bb plugins
+
+This is one of eight bb plugins I publish — see them all at
+[**vburojevic/bb-plugins**](https://github.com/vburojevic/bb-plugins).
