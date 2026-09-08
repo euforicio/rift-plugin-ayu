@@ -10,8 +10,11 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// server.ts
-import { defineRpcContract } from "@get-bb/plugin-sdk";
+// node_modules/@riftlabs/plugin-sdk/dist/index.js
+var PLUGIN_CLI_OUTPUT_MAX_BYTES = 1024 * 1024;
+function defineRpcContract(contract) {
+  return contract;
+}
 
 // node_modules/zod/v4/classic/external.js
 var external_exports = {};

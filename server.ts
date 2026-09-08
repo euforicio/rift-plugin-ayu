@@ -11,7 +11,7 @@
 //
 // Palette data itself never crosses rpc: `generated/palettes.ts` is a plain
 // module, so the frontend bundles it directly.
-import { defineRpcContract, type BbPluginApi } from "@get-bb/plugin-sdk";
+import { defineRpcContract, type RiftPluginApi } from "@riftlabs/plugin-sdk";
 import { z } from "zod";
 import { AYU_PALETTES, AYU_VARIANTS, type AyuVariant } from "./generated/palettes";
 import { AYU_THEMES } from "./themes-meta";
@@ -39,7 +39,7 @@ const USAGE = [
   `Variants: ${AYU_VARIANTS.join(", ")}. A filter matches dotted keys, e.g. \`syntax\`.`,
 ].join("\n");
 
-export default function plugin(bb: BbPluginApi) {
+export default function plugin(bb: RiftPluginApi) {
   const qualify = (id: string) => `plugin:${bb.pluginId}:${id}`;
 
   bb.rpc.register(rpcContract, {

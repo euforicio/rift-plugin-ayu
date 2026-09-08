@@ -222,6 +222,11 @@ Colours are MIT-licensed by the ayu project (Ike Ku / Konstantin Pschera).
 
 ---
 
+## Fork provenance
+
+Rift Labs fork: https://github.com/euforicio/rift-plugin-ayu
+Upstream: https://github.com/vburojevic/bb-plugin-ayu
+
 ## More bb plugins
 
 See every bb plugin I publish at

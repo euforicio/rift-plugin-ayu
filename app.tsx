@@ -10,7 +10,7 @@ import {
   useRealtime,
   useRealtimeConnectionState,
   useRpc,
-} from "@get-bb/plugin-sdk/app";
+} from "@riftlabs/plugin-sdk/app";
 import { toast } from "sonner";
 import type { rpcContract } from "./server";
 import { AYU_PALETTES, type AyuVariant } from "./generated/palettes";
